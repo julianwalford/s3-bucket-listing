@@ -158,7 +158,13 @@ function renderRow(item, cols) {
   var row = '';
   row += padRight(item.LastModified, cols[1]) + '  ';
   row += padRight(item.Size, cols[2]);
-  row += '<a href="' + item.href + '">' + item.keyText + '</a>';
+  if item.Type === 'file') {
+    row += '<img src="'+item.href+'"/>'
+  }
+  else
+  {
+    row += '<a href="' + item.href + '">' + item.keyText + '</a>';
+  }
   return row;
 }
 
