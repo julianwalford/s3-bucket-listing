@@ -158,7 +158,7 @@ function renderRow(item, cols) {
   var row = '';
   row += padRight(item.LastModified, cols[1]) + '  ';
   row += padRight(item.Size, cols[2]);
-  if item.Type === 'file') {
+  if (item.Type === 'file') {
     row += '<img src="'+item.href+'"/>'
   }
   else
